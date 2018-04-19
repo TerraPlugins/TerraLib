@@ -91,6 +91,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Column.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="ChatCommand.cs" />
     <Compile Include="TerraLib.cs" />

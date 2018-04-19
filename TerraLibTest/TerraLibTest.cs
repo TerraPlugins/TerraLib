@@ -57,14 +57,15 @@ namespace TerraLibTest
         private void OnPostInitialize(EventArgs args)
         {
             Database.Connect("terralibtest");
-            Database.CreateTable(new SqlTable("TestTable",
-                new SqlColumn("Test", MySqlDbType.Int32) { DefaultValue = "2" },
-                new SqlColumn("Test2", MySqlDbType.Float) { DefaultValue = "3.2" },
-                new SqlColumn("Test3", MySqlDbType.String) { DefaultValue = "adsfas" }));
+            Database.EnsureTable(new SqlTable("Tests",
+                new SqlColumn("ID", MySqlDbType.Int32) { Primary = true, AutoIncrement = true, NotNull = true },
+                new SqlColumn("Name", MySqlDbType.VarChar, 32) { DefaultValue = "3.2" }));
 
-            var res = Database.Context.ExecuteQuery<TestSerialize>("SELECT * FROM TestTable");
+            Database.Query("INSERT INTO Tests (Name) VALUES (@0)", "hi");
 
-            TShock.Log.ConsoleInfo("Test3: {0}", res.First().Test3);
+            var t = Database.QueryResult<TestClass>("select * from Tests");
+
+            TShock.Log.ConsoleError(t.First().Name);
         }
 
         #endregion Hooks
