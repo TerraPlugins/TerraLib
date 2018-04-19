@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using TShockAPI;
+using System.Reflection;
 using Terraria;
 using TerrariaApi.Server;
-using System.Reflection;
+using TShockAPI;
 
 namespace TerraLib
 {
@@ -13,11 +10,13 @@ namespace TerraLib
     public class TerraLib : TerrariaPlugin
     {
         #region Plugin Info
+
         public override string Name => "TerraLib";
         public override string Author => "Ryozuki";
         public override string Description => "A plugin to help other plugins.";
         public override Version Version => Assembly.GetExecutingAssembly().GetName().Version;
-        #endregion
+
+        #endregion Plugin Info
 
         public TerraLib(Main game) : base(game)
         {

@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Linq;
-using System.Text;
-using TShockAPI;
+using System.Reflection;
+using TerraLib;
 using Terraria;
 using TerrariaApi.Server;
-using System.Reflection;
-using System.IO;
+using TShockAPI;
 using TShockAPI.DB;
-using TerraLib;
-using MySql.Data.MySqlClient;
 
 namespace TerraLibTest
 {
@@ -17,11 +14,13 @@ namespace TerraLibTest
     public class TerraLibTest : TerrariaPlugin
     {
         #region Plugin Info
+
         public override string Name => "TerraLibTest";
         public override string Author => "Ryozuki";
         public override string Description => "Replace me!!!";
         public override Version Version => Assembly.GetExecutingAssembly().GetName().Version;
-        #endregion
+
+        #endregion Plugin Info
 
         public ConfigTest Config = new ConfigTest();
 
@@ -49,6 +48,7 @@ namespace TerraLibTest
         }
 
         #region Hooks
+
         private void OnInitialize(EventArgs args)
         {
             TerraLib.TerraLib.RegisterCommand(testCommand);
@@ -66,6 +66,7 @@ namespace TerraLibTest
 
             TShock.Log.ConsoleInfo("Test3: {0}", res.First().Test3);
         }
-        #endregion
+
+        #endregion Hooks
     }
 }

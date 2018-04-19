@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using TShockAPI;
 
 namespace TerraLib
@@ -31,10 +27,12 @@ namespace TerraLib
         /// The permissions required to run the command.
         /// </summary>
         public List<string> Permissions = new List<string>();
+
         /// <summary>
         /// The aliases for the command
         /// </summary>
         public List<string> Names = new List<string>();
+
         /// <summary>
         /// A detailed description of what the command does.
         /// </summary>
