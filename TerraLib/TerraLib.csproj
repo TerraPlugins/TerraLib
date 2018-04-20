@@ -94,6 +94,7 @@
     <Compile Include="Column.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="ChatCommand.cs" />
+    <Compile Include="Extensions.cs" />
     <Compile Include="TerraLib.cs" />
     <Compile Include="Database.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
