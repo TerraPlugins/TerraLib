@@ -1,5 +1,0 @@
-﻿- Command creation, with custom options, such if can be used while in pvp.
-- Implement full LINQ database handler
-- Better logger
-- Class to table
-- TShock reload utility
