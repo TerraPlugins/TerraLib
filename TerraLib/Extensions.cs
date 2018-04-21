@@ -11,6 +11,11 @@ namespace TerraLib
 {
     public static class Extensions
     {
+        /// <summary>
+        /// Wether the playerh as pvp enabled or not
+        /// </summary>
+        /// <param name="ply"></param>
+        /// <returns></returns>
         public static bool PvPEnabled(this TSPlayer ply)
         {
             return Main.player[ply.Index].hostile;
