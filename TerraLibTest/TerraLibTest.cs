@@ -17,7 +17,7 @@ namespace TerraLibTest
 
         public override string Name => "TerraLibTest";
         public override string Author => "Ryozuki";
-        public override string Description => "Replace me!!!";
+        public override string Description => "A test plugin";
         public override Version Version => Assembly.GetExecutingAssembly().GetName().Version;
 
         #endregion Plugin Info
